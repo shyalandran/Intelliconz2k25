@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="vk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Knowledge</title>
+  <link rel="icon" href="src/images/logo/hh.png" />
+  <link href="style.css" rel="stylesheet">
+  <link href="mediastyle.css" rel="stylesheet" />
+</head>
+
+<body x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+  @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="kf fl">
+
+  <header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' " class="f ba qb jc be c">
+    <div class="a" style="height: 80px;">
+      <div class="e ha qb be ee" style="margin-top: -10px;">
+        <div class="logotop">
+          <a >
+            <image src="src/images/logo/PEC LOGO.png" alt="author"></image>
+          </a>
+        </div>
+        <div class="qb jc be ce ng">
+          <div>
+            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
+              class="d g h/2 ob qd/2 me pg qg mj qk to">
+              <span :class="navbarOpen && 'sd i' " class="e ia ob tb lc mf il"></span>
+              <span :class="navbarOpen && 'fj' " class="e ia ob tb lc mf il"></span>
+              <span :class="navbarOpen && 'j td' " class="e ia ob tb lc mf il"></span>
+            </button>
+            <nav :class="!navbarOpen && 'sb' " id="navbarCollapse"
+              class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq">
+              <ul class="vq ro">
+                <li>
+                  <a href="index.html#home" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html#features" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+                    Instructions
+                  </a>
+                </li>
+                <li class="sk submenu-item e">
+                  <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
+                    class="e qb tg gi oi xi uj vj wj/2 xj yj zj _j ak bk ck dk tk ul hm ko so ip np op zp cq 2xl:ud-ml-12">
+                    Events
+                  </a>
+                  <div :class="dropdownOpen ? 'ob' : 'sb qo ' "
+                    class="submenu e k l me kf pj sj uk fl eo go ho vo ep wp yp _p aq">
+                    <a href="event1.html" class="ob ne ug hi yi kk vl fm jp">
+                      Visionary Insights
+                    </a>
+                    <a href="event2.html" class="ob ne ug hi yi kk vl fm jp">
+                      Code Bonanza
+                    </a>
+                    <a href="event3.html" class="ob ne ug hi yi kk vl fm jp">
+                      Nexus Knowledge
+                    </a>
+                    <a href="event4.html" class="ob ne ug hi yi kk vl fm jp">
+                      Role Camera Action
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <a href="index.html#footer" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="e ca" style="margin-top: 100px;">
+    <div class="a">
+      <div class="me nf fh wg ml ym zm lp nq" style="margin-bottom: 30px;">
+        <div class="wow fadeInUp ib" data-wow-delay="0s">
+          <h2 class="va li pi ui yi vl bo">Nexus Knowledge</h2>
+          <span class="va gi pi ri bj fn">Memory Vault </span>
+          <p class="gi qi xi ul">
+            Step into the world of Memory Quest, an exciting game that blends sharp observation skills with the thrill of a treasure hunt!
+In this adventure, players embark on a journey where they must observe, remember, and answer the questions. The game begins with a vivid scene. Players have a short time to memorize every detail before the image disappears. Then, the real challenge begins!
+Race against time as you and your team solve riddles, crack codes, and follow hidden clues across campus to uncover the final treasure. With thrilling challenges, mind-boggling puzzles, and exciting rewards, this event tests your wit, teamwork, and speed. Only the sharpest minds and quickest feet will triumph! Do you have what it takes to find the treasure?          </p>
+        </div>
+        <div class="ha qb _d be">
+          <div class="jc ng yo/2">
+            <img src="https://i.pinimg.com/736x/9d/2c/86/9d2c86ab1b56584a898a81d944a2852f.jpg" style="border-radius: 5%; height: 420px; width: 100%;">
+          </div>
+          <div class="jc ng yo/2">
+            
+            <div class="wow fadeInUp ie" data-wow-delay="0s">
+              <span class="va gi pi ri bj fn">Round 1:</span>
+              <p class="qb">
+                <span class="oa dc rc oe of"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> The images will be shown one by one. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe sf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> Players must focus and try to remember as many details as possible </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe sf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> After each image has been shown for a limited period of time, playerswill be quizzed on its basis.</span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe sf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> No images will be shown again during this round. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe tf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> Each correct answer earns points. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe uf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> The top 10 teams with the highest score at the end will be shortlisted for the Final Round. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe uf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> Teams will advance to Round 2 based on their overall performance and points accrued. </span>
+              </p>
+            </div>
+          </div>
+        </div><br><br>
+        <div class="ha qb _d be">
+          <div class="jc ng yo/2">
+            <img src="https://i.pinimg.com/736x/5b/6c/86/5b6c86a53d6fe9e7f062327e026e05d8.jpg" style="border-radius: 5%;">
+          </div>
+          <div class="jc ng yo/2">
+            <div class="wow fadeInUp ie" data-wow-delay="0s">
+              <span class="va gi pi ri bj fn">Round 2:</span>
+              <p class="qb">
+                <span class="oa dc rc oe of"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> Players receive the first riddle or question. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe sf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> Solving it correctly reveals the location of the next clue. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe tf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> Each clue leads to the next, requiring players to use logic, observation, and teamwork. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe uf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> Some clues may include puzzles, word games, or physical challenges.</span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe uf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> The final clue leads to the hidden treasure. </span>
+              </p>
+              <p class="qb">
+                <span class="oa dc rc oe uf"></span>
+                <span class="gi qi xi ul"  style="width: 450px;"> The first player or team to find it wins! </span>
+              </p><br><br>
+              <a href="https://forms.gle/Mxbc7bhtjwuH4kFC7" target="_blank">
+                <button class=" _b oe of ch zi hk im mm rm/2">Register Now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d m v ea">
+      <img src="src/images/shapes/token-sale-shape.svg" alt="shape" />
+    </div>
+  </section>
+
+  <section id="footer" class="e ca">
+    <footer class="e ca th" style="margin-top: -50px;">
+      <div class="a">
+        <div class="ha qb _d">
+          <div class="jc profile ng qm/2 vn/2 wo/12 hq/6">
+            <div class="wow fadeInUp fi" data-wow-delay="0s">
+                <img src="src/images/team/principal.png" class="profileimg" alt="Dr. K. Mani" width="120">
+                <h2 class="mi vl">Dr. K. Mani M.E., Ph.D</h2>
+                <div class="wow fadeInUp we bf fi">
+                    <p class="three ii qi wi xi ul">Principal</p>
+                </div>
+            </div>
+          </div>
+          <div class="jc profile ng qm/2 vn/2 wo/12 hq/6">
+            <div class="wow fadeInUp fi" data-wow-delay="0s">
+                <img src="src/images/team/hod-aids.png" class="profileimg" alt="Dr. S. Malathi" width="120">
+                <h2 class="mi vl">Dr. S. Malathi M.E., Ph.D</h2>
+                <div class="wow fadeInUp we bf fi">
+                    <p class="ii qi wi xi ul">Head Of Department</p>
+                </div>
+            </div>
+          </div>
+          <div class="jc profile ng qm/2 vn/2 wo/12 hq/6">
+            <div class="wow fadeInUp fi" data-wow-delay="0s">
+                <img src="src/images/team/joshi.png" class="profileimg" alt="Dr. P. Chinnadurai" width="120">
+                <h2 class="mi vl">Dr. A. JOSHI , M.E, Ph.D.</h2>
+                <div class="wow fadeInUp we bf fi">
+                    <p class="three ii qi wi xi ul">Secretary & Correspondent</p>
+                </div>
+            </div>
+          </div>
+          <div class="jc ng vn/2 wo/12 gq/12" style="margin-top: 50px;">
+            <div class="wow fadeInUp bb dd eq" data-wow-delay="0s">
+              <a href="index.html" class="ta pb">
+                <image
+                  src="src/images/logo/panimalar.png"
+                  alt="author"
+                >
+              </a>
+              <p class="ra ii qi xi ul">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1201.2163760837466!2d80.0766345235475!3d13.049359988622829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528b0f9c10674d%3A0xcb7caa7469b205da!2sPANIMALAR%20AI%26DS%20block!5e0!3m2!1sen!2sin!4v1708666465470!5m2!1sen!2sin" width="300" height="150" style="border-radius:5%; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </p>
+
+            </div>
+          </div>
+          <div class="jc ng qm/2 vn/2 wo/12 hq/5" style="margin-top: 50px;">
+            <div class="wow fadeInUp bb eq" data-wow-delay="0s">
+              <h2 class="za mi pi yi vl">Staff Co-ordinator</h2>
+              <div class="he">
+                <a href="javascript:void(0)" class="ob ii qi xi kk ul fm">
+                 Mrs. R. Priya,AP
+                </a>
+                <a href="javascript:void(0)" class="ob ii qi xi kk ul fm">
+                  Mrs. . kavitha,AP
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="jc ng qm/2 vn/2 wo/12 hq/6" style="margin-top: 50px;">
+            <div class="wow fadeInUp bb eq" data-wow-delay="0s">
+              <h2 class="za mi pi yi vl">Student Co-ordinator</h2>
+              <div class="he">
+                <a href="https://www.linkedin.com/in/harivishnu-k-c-75232830a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="ob ii qi xi kk ul fm">
+                  HARI VISHUNU KC
+                </a>
+                <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel: 6379279094">
+                  <b>Contact : </b> 6379279094
+                </a> 
+                <a href="https://www.linkedin.com/in/md-arshad-82b742281/" target="_blank" class="ob ii qi xi kk ul fm">
+                  Mohamed Arshad M
+                </a>
+                <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel: 6379279094">
+                  <b>Contact : </b> 7010359430
+                </a>
+                <a href= target="_blank" class="ob ii qi xi kk ul fm">
+                  Vishva Dharshini 
+                </a>
+                <a href="https://www.linkedin.com/in/vishva-dharshini-292050282/"javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel:9025411142">
+                  <b>Contact : </b> 8608600578
+                </a>
+                <a href="" target="_blank" class="ob ii qi xi kk ul fm">
+                  Jagan 
+                </a>
+                <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel:9025411142">
+                  <b>Contact : </b> 7708297260
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wow fadeInUp we bf dh fi al" data-wow-delay="0s">
+          <p class="ii qi wi xi ul">Designed and Developed by <a href="https://www.linkedin.com/in/shyalandran-j-3b992726a/" target="_blank">Shyalandran J ,</a><a href="www.linkedin.com/in/visweswar-challa" target="_blank">visweswar ,</a><a href="https://www.linkedin.com/in/md-arshad-82b742281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Mohamed Arshad M  ,</a><a href="https://www.linkedin.com/in/pragatheswaran-s-3b2084232/" target="_blank">Pragatheswaran S,</a> <a href="https://sanjaykumar-codes.github.io/" target="_blank">Sanjay Kumar M,</a> <a href="https://imonishkumar.github.io/" target="_blank">Monish Kumar A</a></p>
+        </div>
+      </div>
+      <div class="d f l ea">
+        <img src="src/images/shapes/footer-shape-2.svg" alt="shape" />
+      </div>
+      <div class="d n m ea">
+        <img src="src/images/shapes/footer-shape-1.svg" alt="shape" />
+      </div>
+    </footer>
+  </section>
+
+  <script defer="" src="bundle.js"></script>
+  <script>(function () { var js = "window['__CF$cv$params']={r:'858606ba29db18a2',t:'MTcwODQyNDUyMy45MTEwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);"; var _0xh = document.createElement('iframe'); _0xh.height = 1; _0xh.width = 1; _0xh.style.position = 'absolute'; _0xh.style.top = 0; _0xh.style.left = 0; _0xh.style.border = 'none'; _0xh.style.visibility = 'hidden'; document.body.appendChild(_0xh); function handler() { var _0xi = _0xh.contentDocument || _0xh.contentWindow.document; if (_0xi) { var _0xj = _0xi.createElement('script'); _0xj.innerHTML = js; _0xi.getElementsByTagName('head')[0].appendChild(_0xj); } } if (document.readyState !== 'loading') { handler(); } else if (window.addEventListener) { document.addEventListener('DOMContentLoaded', handler); } else { var prev = document.onreadystatechange || function () { }; document.onreadystatechange = function (e) { prev(e); if (document.readyState !== 'loading') { document.onreadystatechange = prev; handler(); } }; } })();</script>
+  <script defer="" src="beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+    integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+    data-cf-beacon='{"rayId":"858606ba29db18a2","r":1,"version":"2024.2.0","token":"9a6015d415bb4773a0bff22543062d3b"}'
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
