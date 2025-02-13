@@ -18,73 +18,68 @@
     " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
   @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="kf fl">
 
-  <header x-data="
-        {
-          navbarOpen: false,
-          dropdownOpen: false
-        }
-      " :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' " class="f ba qb jc be c">
-    <div class="a" style="height: 80px;">
-      <div class="e ha qb be ee" style="margin-top: -10px;">
-        <div class="logotop">
-          <a >
-            <image src="src/images/logo/PEC LOGO.png" alt="author"></image>
-          </a>
-        </div>
-        <div class="qb jc be ce ng">
-          <div>
-            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
-              class="d g h/2 ob qd/2 me pg qg mj qk to">
-              <span :class="navbarOpen && 'sd i' " class="e ia ob tb lc mf il"></span>
-              <span :class="navbarOpen && 'fj' " class="e ia ob tb lc mf il"></span>
-              <span :class="navbarOpen && 'j td' " class="e ia ob tb lc mf il"></span>
-            </button>
-            <nav :class="!navbarOpen && 'sb' " id="navbarCollapse"
-              class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq">
-              <ul class="vq ro">
-                <li>
-                  <a href="index.html#home" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
-                    Home
+  <header x-data="{ navbarOpen: false, dropdownOpen: false }"
+  :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' " class="f ba qb jc be c">
+  <div class="a" style="height: 80px;">
+    <div class="e ha qb be ee" style="margin-top: -10px;">
+      <div class="logotop">
+        <a>
+          <img src="src/images/logo/PEC LOGO.png" alt="author">
+        </a>
+      </div>
+      <div class="qb jc be ce ng">
+        <div>
+          <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
+            class="d g h/2 ob qd/2 me pg qg mj qk to">
+            <span :class="navbarOpen && 'sd i' " class="e ia ob tb lc mf il"></span>
+            <span :class="navbarOpen && 'fj' " class="e ia ob tb lc mf il"></span>
+            <span :class="navbarOpen && 'j td' " class="e ia ob tb lc mf il"></span>
+          </button>
+          <nav x-show="navbarOpen" @click.outside="navbarOpen = false" id="navbarCollapse"
+            class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq">
+            <ul class="vq ro">
+              <li class="xi ul">
+                <a href="index.html#home" @click="navbarOpen = false" class="scroll-menu qb tg gi oi bj kk vl em ko so ip cq 2xl:ud-ml-12">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="index.html#features" @click="navbarOpen = false" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+                  Instructions
+                </a>
+              </li>
+              <li class="sk submenu-item e">
+                <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
+                  class="e qb tg gi oi xi uj vj wj/2 xj yj zj _j ak bk ck dk tk ul hm ko so ip np op zp cq 2xl:ud-ml-12">
+                  Events
+                </a>
+                <div :class="dropdownOpen ? 'ob' : 'sb qo ' " class="submenu e k l me kf pj sj uk fl eo go ho vo ep wp yp _p aq">
+                  <a href="event1.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Visionary Insights
                   </a>
-                </li>
-                <li>
-                  <a href="index.html#features" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
-                    Instructions
+                  <a href="event2.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Code Bonanza
                   </a>
-                </li>
-                <li class="sk submenu-item e">
-                  <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
-                    class="e qb tg gi oi xi uj vj wj/2 xj yj zj _j ak bk ck dk tk ul hm ko so ip np op zp cq 2xl:ud-ml-12">
-                    Events
+                  <a href="event3.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Nexus Knowledge
                   </a>
-                  <div :class="dropdownOpen ? 'ob' : 'sb qo ' "
-                    class="submenu e k l me kf pj sj uk fl eo go ho vo ep wp yp _p aq">
-                    <a href="event1.html" class="ob ne ug hi yi kk vl fm jp">
-                      Visonary insights
-                    </a>
-                    <a href="event2.html" class="ob ne ug hi yi kk vl fm jp">
-                      Code Bonanza
-                    </a>
-                    <a href="event3.html" class="ob ne ug hi yi kk vl fm jp">
-                      Nexus Knowledge
-                    </a>
-                    <a href="event4.html" class="ob ne ug hi yi kk vl fm jp">
-                      Role Camera Action
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <a href="index.html#footer" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
-                    Contact
+                  <a href="event4.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Roll Camera Action
                   </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+                </div>
+              </li>
+              <li>
+                <a href="#footer" @click="navbarOpen = false" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <section class="e ca" style="margin-top: 100px;">
     <div class="a">
@@ -109,6 +104,10 @@ Don't miss this incredible opportunity to test your expertise, connect with like
             <div class="wow fadeInUp ie" data-wow-delay="0s">
               <span class="va gi pi ri bj fn">Round 1:</span>
               <span class="va gi pi ri bj fn">HTML & CSS Code Completion Challenge</span>
+              <p class="qb">
+                <span class="oa dc rc oe of"></span>
+                <span class="gi qi xi ul"  style="width: 450px;">Complete the HTML programs with the correct code to achieve the desired output. </span>
+              </p>
               <p class="qb">
                 <span class="oa dc rc oe of"></span>
                 <span class="gi qi xi ul"  style="width: 450px;"> <b>Team Size:</b> Each team comprises 2 members. </span>
@@ -256,11 +255,11 @@ Don't miss this incredible opportunity to test your expertise, connect with like
             <div class="wow fadeInUp bb eq" data-wow-delay="0s">
               <h2 class="za mi pi yi vl">Staff Co-ordinator</h2>
               <div class="he">
-                <a href="javascript:void(0)" class="ob ii qi xi kk ul fm">
-                 Mrs. S. Swathi,AP
+                <a href="https://www.linkedin.com/in/anitha-j-7770762a6/" class="ob ii qi xi kk ul fm">
+                  Mrs. J. ANITHA,AP
                 </a>
                 <a href="javascript:void(0)" class="ob ii qi xi kk ul fm">
-                  Mr. C. Vivek,AP
+                  Mrs. V. RATHINAPRIYA,AP
                 </a>
               </div>
             </div>
@@ -269,41 +268,41 @@ Don't miss this incredible opportunity to test your expertise, connect with like
             <div class="wow fadeInUp bb eq" data-wow-delay="0s">
               <h2 class="za mi pi yi vl">Student Co-ordinator</h2>
               <div class="he">
-                <a href="https://www.linkedin.com/in/yokesh-muthu-k-7a55b2104/?originalSubdomain=in" target="_blank" class="ob ii qi xi kk ul fm">
+                <a href="https://www.linkedin.com/in/harish-j-620aa52b2/" target="_blank" class="ob ii qi xi kk ul fm">
                   Mr.HARISH J
                 </a>
                 <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel: 6379279094">
-                  <b>Contact : </b> 6379279094
+                  <b>Contact : </b> 6382679612
                 </a>
-                <a href="https://www.linkedin.com/in/sethu-subramaniyan-76ab55249/" target="_blank" class="ob ii qi xi kk ul fm">
+                <a href="https://www.linkedin.com/in/swarnalakshmi-s/" target="_blank" class="ob ii qi xi kk ul fm">
                   Ms.SWARNALAKSHMI S
                 </a>
                 <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel:9025411142">
-                  <b>Contact : </b> 9025411142
+                  <b>Contact : </b> 7904673194
                 </a>
-                <a href="https://www.linkedin.com/in/sethu-subramaniyan-76ab55249/" target="_blank" class="ob ii qi xi kk ul fm">
+                <a href="https://www.linkedin.com/in/hariprasaanth-kamal-4b80602a2/" target="_blank" class="ob ii qi xi kk ul fm">
                   Mr.HARIPRASAANTH K
                 </a>
                 <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel:9025411142">
-                  <b>Contact : </b> 9025411142
+                  <b>Contact : </b> 9442754295
                 </a>
-                <a href="https://www.linkedin.com/in/sethu-subramaniyan-76ab55249/" target="_blank" class="ob ii qi xi kk ul fm">
+                <a href="www.linkedin.com/in/rakshini-h" target="_blank" class="ob ii qi xi kk ul fm">
                   Ms.RAKSHINI H
                 </a>
                 <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel:9025411142">
-                  <b>Contact : </b> 9025411142
+                  <b>Contact : </b> 9043858059
                 </a>
-                <a href="https://www.linkedin.com/in/sethu-subramaniyan-76ab55249/" target="_blank" class="ob ii qi xi kk ul fm">
+                <a href="https://www.linkedin.com/in/siva22sakthi/" target="_blank" class="ob ii qi xi kk ul fm">
                   Ms.SIVA SAKTHI S
                 </a>
                 <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel:9025411142">
-                  <b>Contact : </b> 9025411142
+                  <b>Contact : </b> 6380579631
                 </a>
-                <a href="https://www.linkedin.com/in/sethu-subramaniyan-76ab55249/" target="_blank" class="ob ii qi xi kk ul fm">
-                  Ms.YUVASRI V
+                <a href="https://www.linkedin.com/in/uvasriram/" target="_blank" class="ob ii qi xi kk ul fm">
+                  Ms.UVASRI V
                 </a>
                 <a href="javascript:void(0)" class="ob ii qi xi kk ul fm" target="_blank" href="tel:9025411142">
-                  <b>Contact : </b> 9025411142
+                  <b>Contact : </b> 6374033085
                 </a>
                 
               </div>
@@ -330,6 +329,7 @@ Don't miss this incredible opportunity to test your expertise, connect with like
     integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
     data-cf-beacon='{"rayId":"858606ba29db18a2","r":1,"version":"2024.2.0","token":"9a6015d415bb4773a0bff22543062d3b"}'
     crossorigin="anonymous"></script>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  </body>
 
 </html>

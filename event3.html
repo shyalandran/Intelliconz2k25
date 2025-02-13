@@ -18,73 +18,68 @@
     " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
   @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="kf fl">
 
-  <header x-data="
-        {
-          navbarOpen: false,
-          dropdownOpen: false
-        }
-      " :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' " class="f ba qb jc be c">
-    <div class="a" style="height: 80px;">
-      <div class="e ha qb be ee" style="margin-top: -10px;">
-        <div class="logotop">
-          <a >
-            <image src="src/images/logo/PEC LOGO.png" alt="author"></image>
-          </a>
-        </div>
-        <div class="qb jc be ce ng">
-          <div>
-            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
-              class="d g h/2 ob qd/2 me pg qg mj qk to">
-              <span :class="navbarOpen && 'sd i' " class="e ia ob tb lc mf il"></span>
-              <span :class="navbarOpen && 'fj' " class="e ia ob tb lc mf il"></span>
-              <span :class="navbarOpen && 'j td' " class="e ia ob tb lc mf il"></span>
-            </button>
-            <nav :class="!navbarOpen && 'sb' " id="navbarCollapse"
-              class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq">
-              <ul class="vq ro">
-                <li>
-                  <a href="index.html#home" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
-                    Home
+  <header x-data="{ navbarOpen: false, dropdownOpen: false }"
+  :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' " class="f ba qb jc be c">
+  <div class="a" style="height: 80px;">
+    <div class="e ha qb be ee" style="margin-top: -10px;">
+      <div class="logotop">
+        <a>
+          <img src="src/images/logo/PEC LOGO.png" alt="author">
+        </a>
+      </div>
+      <div class="qb jc be ce ng">
+        <div>
+          <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
+            class="d g h/2 ob qd/2 me pg qg mj qk to">
+            <span :class="navbarOpen && 'sd i' " class="e ia ob tb lc mf il"></span>
+            <span :class="navbarOpen && 'fj' " class="e ia ob tb lc mf il"></span>
+            <span :class="navbarOpen && 'j td' " class="e ia ob tb lc mf il"></span>
+          </button>
+          <nav x-show="navbarOpen" @click.outside="navbarOpen = false" id="navbarCollapse"
+            class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq">
+            <ul class="vq ro">
+              <li class="xi ul">
+                <a href="#home" @click="navbarOpen = false" class="scroll-menu qb tg gi oi bj kk vl em ko so ip cq 2xl:ud-ml-12">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#features" @click="navbarOpen = false" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+                  Instructions
+                </a>
+              </li>
+              <li class="sk submenu-item e">
+                <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
+                  class="e qb tg gi oi xi uj vj wj/2 xj yj zj _j ak bk ck dk tk ul hm ko so ip np op zp cq 2xl:ud-ml-12">
+                  Events
+                </a>
+                <div :class="dropdownOpen ? 'ob' : 'sb qo ' " class="submenu e k l me kf pj sj uk fl eo go ho vo ep wp yp _p aq">
+                  <a href="event1.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Visionary Insights
                   </a>
-                </li>
-                <li>
-                  <a href="index.html#features" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
-                    Instructions
+                  <a href="event2.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Code Bonanza
                   </a>
-                </li>
-                <li class="sk submenu-item e">
-                  <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
-                    class="e qb tg gi oi xi uj vj wj/2 xj yj zj _j ak bk ck dk tk ul hm ko so ip np op zp cq 2xl:ud-ml-12">
-                    Events
+                  <a href="event3.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Nexus Knowledge
                   </a>
-                  <div :class="dropdownOpen ? 'ob' : 'sb qo ' "
-                    class="submenu e k l me kf pj sj uk fl eo go ho vo ep wp yp _p aq">
-                    <a href="event1.html" class="ob ne ug hi yi kk vl fm jp">
-                      Visionary Insights
-                    </a>
-                    <a href="event2.html" class="ob ne ug hi yi kk vl fm jp">
-                      Code Bonanza
-                    </a>
-                    <a href="event3.html" class="ob ne ug hi yi kk vl fm jp">
-                      Nexus Knowledge
-                    </a>
-                    <a href="event4.html" class="ob ne ug hi yi kk vl fm jp">
-                      Role Camera Action
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <a href="index.html#footer" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
-                    Contact
+                  <a href="event4.html" @click="navbarOpen = false" class="ob ne ug hi yi kk vl fm jp">
+                    Roll Camera Action
                   </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+                </div>
+              </li>
+              <li>
+                <a href="#footer" @click="navbarOpen = false" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
 
   <section class="e ca" style="margin-top: 100px;">
@@ -291,6 +286,7 @@ Race against time as you and your team solve riddles, crack codes, and follow hi
     integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
     data-cf-beacon='{"rayId":"858606ba29db18a2","r":1,"version":"2024.2.0","token":"9a6015d415bb4773a0bff22543062d3b"}'
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>  
 </body>
 
 </html>
