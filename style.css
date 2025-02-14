@@ -2789,3 +2789,10 @@ input#checkboxLabel:checked~.box span {
   }
 }
 
+.new-card-container {
+  width: 100%; /* Ensures full width */
+  display: block; /* Moves it to a new line */
+  margin-top: 50px; /* Adjust as per spacing needs */
+  clear: both; /* Ensures it appears below floated elements */
+}
+
